@@ -1,6 +1,6 @@
 package com.msiri.springdemo.demo1.api;
 
-import util.Coach;
+import com.msiri.springdemo.demo1.common.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
