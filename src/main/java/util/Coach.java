@@ -1,4 +1,4 @@
-package com.msiri.springdemo.demo1.common;
+package util;
 
 public interface Coach {
 
