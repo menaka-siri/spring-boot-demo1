@@ -40,11 +40,11 @@
 		</dependency>
 
 		<!-- Add support for spring boot security  -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-<!--			<optional>true</optional>-->
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-security</artifactId>-->
+<!--&lt;!&ndash;			<optional>true</optional>&ndash;&gt;-->
+<!--		</dependency>-->
 	</dependencies>
 
 	<build>
