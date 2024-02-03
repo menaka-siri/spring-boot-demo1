@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.sql.SQLOutput;
+import java.util.List;
 
 /*
 @SpringBootApplication (
@@ -29,8 +30,16 @@ public class Demo1Application {
 		return runner -> {
 //			System.out.println("Hello World");
 //			createStudent(studentDAO);
-			readStudent(studentDAO);
+//			readStudent(studentDAO);
+			queryForStudents(studentDAO);
 		};
+	}
+
+	private void queryForStudents(StudentDAO studentDAO) {
+		List<Student> theStudents = studentDAO.findAll();
+		for (Student tempStudent: theStudents) {
+			System.out.println(tempStudent);
+		}
 	}
 
 	private void readStudent(StudentDAO studentDAO) {
