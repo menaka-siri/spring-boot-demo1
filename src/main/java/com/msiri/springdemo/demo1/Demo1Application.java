@@ -33,8 +33,22 @@ public class Demo1Application {
 //			readStudent(studentDAO);
 //			queryForStudents(studentDAO);
 //			queryForStudentsByLastName(studentDAO);
-			updateStudent(studentDAO);
+//			updateStudent(studentDAO);
+//			deleteStudent(studentDAO);
+			deleteAllStudents(studentDAO);
 		};
+	}
+
+	private void deleteAllStudents(StudentDAO studentDAO) {
+		System.out.println("Deleting all students");
+		int numRowsDeleted = studentDAO.deleteAll();
+		System.out.println("Deleted row count: " + numRowsDeleted);
+	}
+
+	private void deleteStudent(StudentDAO studentDAO) {
+		int studentId = 3;
+		System.out.println("Deleting student id: " + studentId);
+		studentDAO.delete(studentId);
 	}
 
 	private void updateStudent(StudentDAO studentDAO) {
@@ -81,7 +95,7 @@ public class Demo1Application {
 
 	private void createStudent(StudentDAO studentDAO) {
 		System.out.println("Creating new student object...");
-		Student tempStudent = new Student("Menaka", "Sirisena", "menaka442@zealtrack.com");
+		Student tempStudent = new Student("Rushen", "Dias", "rushen.d@sahelifashion.com");
 
 		System.out.println("Saving the student object ...");
 		studentDAO.save(tempStudent);
