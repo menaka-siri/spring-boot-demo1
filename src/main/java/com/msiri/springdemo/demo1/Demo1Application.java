@@ -31,8 +31,16 @@ public class Demo1Application {
 //			System.out.println("Hello World");
 //			createStudent(studentDAO);
 //			readStudent(studentDAO);
-			queryForStudents(studentDAO);
+//			queryForStudents(studentDAO);
+			queryForStudentsByLastName(studentDAO);
 		};
+	}
+
+	private void queryForStudentsByLastName(StudentDAO studentDAO) {
+		List<Student> theList = studentDAO.findByLastName("Sirisena");
+		for (Student tempStudent: theList) {
+			System.out.println(tempStudent);
+		}
 	}
 
 	private void queryForStudents(StudentDAO studentDAO) {
