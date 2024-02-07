@@ -3,6 +3,7 @@ package com.msiri.springdemo.demo1.api;
 import com.msiri.springdemo.demo1.entity.Student;
 import jakarta.annotation.PostConstruct;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,5 +29,10 @@ public class StudentRestController {
     @GetMapping("/students")
     public List<Student> getStudents() {
         return theStudents;
+    }
+
+    @GetMapping("/students/{studentId}")
+    public Student getStudent(@PathVariable int studentId) {
+        return theStudents.get(studentId);
     }
 }
