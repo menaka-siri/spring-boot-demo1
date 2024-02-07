@@ -29,7 +29,7 @@ public class Demo1Application {
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
 		return runner -> {
 //			System.out.println("Hello World");
-			createStudent(studentDAO);
+//			createStudent(studentDAO);
 //			readStudent(studentDAO);
 //			queryForStudents(studentDAO);
 //			queryForStudentsByLastName(studentDAO);
